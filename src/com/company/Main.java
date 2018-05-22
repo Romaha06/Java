@@ -7,7 +7,8 @@ public class Main {
     public static void main(String[] args) {
         //exampl1();
         //exampl2();
-        exampl3();
+        //example3();
+        example4();
 
 	   /* Scanner num = new Scanner(System.in);
 	    int first, second, result;
@@ -183,13 +184,13 @@ public class Main {
         System.out.println("Чему равен Ваш вес на Земле, кг? : ");
         double earth = scanner.nextInt();
         //вычисляем вес пользователя на Луне;
-        double weightPeopleMoon = earth*0.17;
+        double weightPeopleMoon = earth * 0.17;
         //выводим ответ на консоль;
         System.out.println("Ваш вес на Луне равен " + weightPeopleMoon + " кг.");
 
     }
 
-    public static void exampl3() {
+    public static void example3() {
         Scanner scanner = new Scanner(System.in);
         System.out.println("Введите расход топлива вашего авто на 100км: ");
         double hundredKm = scanner.nextDouble();
@@ -198,8 +199,26 @@ public class Main {
         double distance = scanner.nextDouble();
         double consumption = distance * a;
         System.out.println("Вашь расход составляет: " + consumption + " литров ");
+        System.out.println("Введите стоимость одного литра: ");
+        double cost = scanner.nextDouble();
+        System.out.println("Введите валюту: ");
+        String currency = scanner.next();
+        double price = cost * consumption;
+        System.out.println("Необходима такая сумма " + price + " " + currency);
 
 
+    }
+
+    public static void example4() {
+        //Ввести две переменных типа int и сравнить какая из них больше
+        int a = 40;
+        int b = 20;
+
+        if (a < b) {
+            System.out.println("a < b");
+        } else {
+            System.out.println("a >= b");
+        }
     }
 }
 
