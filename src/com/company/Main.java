@@ -8,7 +8,9 @@ public class Main {
         //exampl1();
         //exampl2();
         //example3();
-        example4();
+        //example4();
+        //example5();
+        example6();
 
 	   /* Scanner num = new Scanner(System.in);
 	    int first, second, result;
@@ -220,5 +222,48 @@ public class Main {
             System.out.println("a >= b");
         }
     }
+
+    public static void example5() {
+
+        System.out.println("Задние № 1");
+
+        Scanner scanner = new Scanner(System.in);
+
+        int a, b, res;
+        System.out.println("Введите первое число: ");
+        a = scanner.nextInt();
+        System.out.println("Введите второе число: ");
+        b = scanner.nextInt();
+
+        if (b == 0) {
+            System.out.println("Error");
+        } else {
+            res = a / b;
+            System.out.println("Верно: " + res);
+        }
+    }
+
+    public static void example6() {
+
+        System.out.println("Задние № 2");
+
+        Scanner scanner = new Scanner(System.in);
+        double c, res1;
+
+        System.out.println("Сумма покупки: ");
+        c = scanner.nextDouble();
+
+        if (c < 500) {
+            System.out.println("Нет скидки ");
+        } else if (c > 1000) {
+
+            res1 = c * 0.95;
+            System.out.println("Скидка 5%" + "Сумма к оплате = " + res1);
+        } else {
+            res1 = c * 0.97;
+            System.out.println("Скидка 3% " + "Сумма к оплате = " + res1);
+        }
+    }
 }
+
 
