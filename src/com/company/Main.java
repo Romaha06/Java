@@ -5,12 +5,15 @@ import java.util.Scanner;
 public class Main {
 
     public static void main(String[] args) {
-        //exampl1();
-        //exampl2();
+        //example1();
+        //example2();
         //example3();
         //example4();
         //example5();
-        example6();
+        //example6();
+        // example7();
+        example8();
+
 
 	   /* Scanner num = new Scanner(System.in);
 	    int first, second, result;
@@ -39,7 +42,7 @@ public class Main {
 	    System.out.println(a / b);*/
     }
 
-    public static void exampl1() {
+    public static void example1() {
 
        /* Scanner scanner = new Scanner(System.in);
 
@@ -175,7 +178,7 @@ public class Main {
 
     }
 
-    public static void exampl2() {
+    public static void example2() {
 
         Scanner scanner = new Scanner(System.in);
 
@@ -248,7 +251,7 @@ public class Main {
         System.out.println("Задние № 2");
 
         Scanner scanner = new Scanner(System.in);
-        double c, res1;
+        double c, res;
 
         System.out.println("Сумма покупки: ");
         c = scanner.nextDouble();
@@ -257,11 +260,46 @@ public class Main {
             System.out.println("Нет скидки ");
         } else if (c > 1000) {
 
-            res1 = c * 0.95;
-            System.out.println("Скидка 5%" + "Сумма к оплате = " + res1);
+            res = c * 0.95;
+            System.out.println("Скидка 5%" + "Сумма к оплате = " + res);
         } else {
-            res1 = c * 0.97;
-            System.out.println("Скидка 3% " + "Сумма к оплате = " + res1);
+            res = c * 0.97;
+            System.out.println("Скидка 3% " + "Сумма к оплате = " + res);
+        }
+    }
+
+    public static void example7(){
+
+        Scanner scanner = new Scanner(System.in);
+        double c, res;
+        System.out.println("Введите сумму:  ");
+        c = scanner.nextDouble();
+        if (c < 200){
+            System.out.println("Нет скидки!");
+        }else if (c > 500){
+            res = c * 0.97;
+            System.out.println("Скидка 3%");
+        }else if (c > 1000){
+            res = c * 0.95;
+            System.out.println("Скидка 5%");
+        }else{
+            res = c * 0.98;
+            System.out.println("Скидка 2%");
+        }
+    }
+    public static void example8(){
+
+        Scanner scanner = new Scanner(System.in);
+        double g, res;
+        System.out.println("Введиту стоимость билета: ");
+        g = scanner.nextDouble();
+
+        if (g <= 25000){
+            System.out.println("Цена приемлема ");
+        } else if (g > 25000){
+            System.out.println("Дорого!!!");
+            res = g * 0.75;
+            System.out.println("Но у вас есть скидка 25%" + " Цена с учетом скидки: " + res );
         }
     }
 }
