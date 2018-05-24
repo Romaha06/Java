@@ -12,7 +12,10 @@ public class Main {
         //example5();
         //example6();
         // example7();
-        example8();
+        //example8();
+        //example9();
+        //example10();
+        example11();
 
 
 	   /* Scanner num = new Scanner(System.in);
@@ -268,38 +271,134 @@ public class Main {
         }
     }
 
-    public static void example7(){
+    public static void example7() {
 
         Scanner scanner = new Scanner(System.in);
         double c, res;
         System.out.println("Введите сумму:  ");
         c = scanner.nextDouble();
-        if (c < 200){
+        if (c < 200) {
             System.out.println("Нет скидки!");
-        }else if (c > 500){
+        } else if (c > 500) {
             res = c * 0.97;
             System.out.println("Скидка 3%");
-        }else if (c > 1000){
+        } else if (c > 1000) {
             res = c * 0.95;
             System.out.println("Скидка 5%");
-        }else{
+        } else {
             res = c * 0.98;
             System.out.println("Скидка 2%");
         }
     }
-    public static void example8(){
+
+    public static void example8() {
 
         Scanner scanner = new Scanner(System.in);
         double g, res;
         System.out.println("Введиту стоимость билета: ");
         g = scanner.nextDouble();
 
-        if (g <= 25000){
-            System.out.println("Цена приемлема ");
-        } else if (g > 25000){
+        if (g <= 25000) {
+            System.out.println("Цена приемлема))) ");
+            res = g * 0.75;
+            System.out.println("Плюс у вас есть скидка 25%" + " Цена с учетом скидки: " + res);
+
+        } else if (g > 25000) {
             System.out.println("Дорого!!!");
             res = g * 0.75;
-            System.out.println("Но у вас есть скидка 25%" + " Цена с учетом скидки: " + res );
+            System.out.println("Но у вас есть скидка 25%" + " Цена с учетом скидки: " + res);
+        }
+    }
+
+    public static void example9() {
+        int a = 0;
+        Scanner scanner = new Scanner(System.in);
+        System.out.println("Введите число: ");
+        a = scanner.nextInt();
+        int b = a % 3;
+        if (b == 0) {
+            System.out.println("Число делится на три");
+        } else {
+            System.out.println("Число не делится на три");
+        }
+    }
+
+    public static void example10() {
+
+        int minutes;
+        int deyOfWeek;
+        double price = 1.02;
+        double summ = 0;
+        Scanner scanner = new Scanner(System.in);
+
+        System.out.println("Вводим количество минут: ");
+        minutes = scanner.nextInt();
+        System.out.println("Введите дедь нидели: ");
+        deyOfWeek = scanner.nextInt();
+
+        if (deyOfWeek == 1 || deyOfWeek == 2
+                || deyOfWeek == 3 || deyOfWeek == 4 || deyOfWeek == 5) {
+            summ = minutes * price;
+            System.out.println("По будням");
+        } else if (deyOfWeek == 6 || deyOfWeek == 7) {
+            summ = minutes * price * 0.80;
+            System.out.println("По выходным");
+        }
+        System.out.println("Стоимость разговора: " + summ);
+    }
+
+    public static void example11() {
+        Scanner scanner = new Scanner(System.in);
+        int id = 0;
+        final int BUTTON_PLUS = 1;
+        final int BUTTON_MINUS = 2;
+        final int BUTTON_MULT = 3;
+        final int BUTTON_DIV = 4;
+        final int BUTTON_PERCENT = 5;
+        final int BUTTON_CLEAR = 6;
+        int a, b;
+        int res;
+
+        System.out.println("Введите первое число: ");
+        a = scanner.nextInt();
+        System.out.println("Введите второе число: ");
+        b = scanner.nextInt();
+
+        System.out.println("Введите id кнопки: ");
+        id = scanner.nextInt();
+
+        switch (id) {
+            case BUTTON_PLUS:
+                res = (a + b);
+                System.out.println("Нажали на сумму");
+                System.out.println(" Равно: " + res);
+                break;
+            case BUTTON_MINUS:
+                res = (a - b);
+                System.out.println("Нажали на разницу");
+                System.out.println(" Равно: " + res);
+                break;
+            case BUTTON_MULT:
+                res = (a * b);
+                System.out.println("Нажали на умножение");
+                System.out.println(" Равно: " + res);
+                break;
+            case BUTTON_DIV:
+                res = (a / b);
+                System.out.println("Нажали на диление");
+                System.out.println(" Равно: " + res);
+                break;
+            case BUTTON_PERCENT:
+                res = (a % b);
+                System.out.println("Нажали на процент");
+                System.out.println(" Равно: " + res);
+                break;
+            case BUTTON_CLEAR:
+                System.out.println("Нажали на очистить");
+                break;
+            default:
+                System.out.println("Вы ввели неправильное значение");
+                break;
         }
     }
 }
