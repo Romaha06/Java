@@ -11,11 +11,14 @@ public class Main {
         //example4();
         //example5();
         //example6();
-        // example7();
+        //example7();
         //example8();
         //example9();
         //example10();
-        example11();
+        //example11();
+        //example12();
+        //example13();
+        example14();
 
 
 	   /* Scanner num = new Scanner(System.in);
@@ -183,6 +186,8 @@ public class Main {
 
     public static void example2() {
 
+        System.out.println("Самостоятельная работа");
+
         Scanner scanner = new Scanner(System.in);
 
         System.out.println("Данная программа поможет Вам узнать свой вес на Луне. ");
@@ -199,6 +204,9 @@ public class Main {
     }
 
     public static void example3() {
+
+        System.out.println("Самостоятельная работа");
+
         Scanner scanner = new Scanner(System.in);
         System.out.println("Введите расход топлива вашего авто на 100км: ");
         double hundredKm = scanner.nextDouble();
@@ -233,6 +241,8 @@ public class Main {
 
         System.out.println("Задние № 1");
 
+        System.out.println("Самостоятельная работа");
+
         Scanner scanner = new Scanner(System.in);
 
         int a, b, res;
@@ -250,6 +260,8 @@ public class Main {
     }
 
     public static void example6() {
+
+        System.out.println("Самостоятельная работа");
 
         System.out.println("Задние № 2");
 
@@ -272,6 +284,7 @@ public class Main {
     }
 
     public static void example7() {
+        System.out.println("Самостоятельная работа");
 
         Scanner scanner = new Scanner(System.in);
         double c, res;
@@ -293,7 +306,9 @@ public class Main {
 
     public static void example8() {
 
+        System.out.println("Самостоятельная работа");
         Scanner scanner = new Scanner(System.in);
+
         double g, res;
         System.out.println("Введиту стоимость билета: ");
         g = scanner.nextDouble();
@@ -311,6 +326,9 @@ public class Main {
     }
 
     public static void example9() {
+
+        System.out.println("Работа на занятии");
+
         int a = 0;
         Scanner scanner = new Scanner(System.in);
         System.out.println("Введите число: ");
@@ -324,7 +342,7 @@ public class Main {
     }
 
     public static void example10() {
-
+        System.out.println("Работа на занятии");
         int minutes;
         int deyOfWeek;
         double price = 1.02;
@@ -348,6 +366,8 @@ public class Main {
     }
 
     public static void example11() {
+
+        System.out.println("Пробы первого калькулятора");
         Scanner scanner = new Scanner(System.in);
         int id = 0;
         final int BUTTON_PLUS = 1;
@@ -355,7 +375,7 @@ public class Main {
         final int BUTTON_MULT = 3;
         final int BUTTON_DIV = 4;
         final int BUTTON_PERCENT = 5;
-        final int BUTTON_CLEAR = 6;
+
         int a, b;
         int res;
 
@@ -393,14 +413,82 @@ public class Main {
                 System.out.println("Нажали на процент");
                 System.out.println(" Равно: " + res);
                 break;
-            case BUTTON_CLEAR:
-                System.out.println("Нажали на очистить");
-                break;
             default:
                 System.out.println("Вы ввели неправильное значение");
                 break;
         }
     }
+
+    public static void example12() {
+
+        System.out.println("Самостоятельная работа");
+        System.out.println("Задание № 2 ");
+
+        Scanner scanner = new Scanner(System.in);
+
+        int a = 1794;
+        int b;
+        System.out.println("В каком году была основана Одесса? ");
+        b = scanner.nextInt();
+        if (b > a || b < a) {
+            System.out.println("Вы ошиблись, Одесса была основана в  1794 году! ");
+        } else {
+            System.out.println("Верно! ");
+        }
+
+    }
+
+    public static void example13() {
+
+        System.out.println("Самостоятельная работа");
+        System.out.println("Задание № 8 ");
+        Scanner scanner = new Scanner(System.in);
+
+        int a;
+        System.out.println("Введите трехзначное число: ");
+        a = scanner.nextInt();
+
+        int res = a * a;
+        int a1 = a / 100;
+        int a2 = (a - (a1 * 100)) / 10;
+        int a3 = a - (a1 * 100) - (a2 * 10);
+        int res2 = a1 * a1 * a1 + a2 * a2 * a2 + a3 * a3 * a3;
+        System.out.println("Вывод первого res: " + res);
+        System.out.println("Вывод второго res: " + res2);
+        if (res == res2) {
+            System.out.println("Числа равны ");
+        } else {
+            System.out.println("Числа не равны ");
+        }
+    }
+
+    public static void example14() {
+
+        System.out.println("Самостоятельная работа");
+        System.out.println("Задание № 9 ");
+
+        double x = 10;
+        double y = 10;
+        double d;
+        double b;
+        if (x < y) {
+            d = ((x + y) / 2);
+            b = x * y * 2;
+            System.out.println(" x = " + d);
+            System.out.println(" y = " + b);
+
+        } else if (x > y) {
+            d = ((x + y) / 2);
+            b = x * y * 2;
+            System.out.println(" x =  " + d);
+            System.out.println(" y = " + b);
+
+        } else {
+            System.out.println("Error");
+        }
+    }
 }
+
+
 
 
