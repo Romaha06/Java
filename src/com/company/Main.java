@@ -15,11 +15,14 @@ public class Main {
         //example8();
         //example9();
         //example10();
-        //example11();
+        // example11();
         //example12();
         //example13();
-        example14();
-
+        //example14();
+        //example15();
+        //example116();
+        //example117();
+        example118();
 
 	   /* Scanner num = new Scanner(System.in);
 	    int first, second, result;
@@ -379,43 +382,45 @@ public class Main {
         int a, b;
         int res;
 
-        System.out.println("Введите первое число: ");
-        a = scanner.nextInt();
-        System.out.println("Введите второе число: ");
-        b = scanner.nextInt();
+        while (true) {
+            System.out.println("Введите первое число: ");
+            a = scanner.nextInt();
+            System.out.println("Введите второе число: ");
+            b = scanner.nextInt();
 
-        System.out.println("Введите id кнопки: ");
-        id = scanner.nextInt();
+            System.out.println("Введите id кнопки: ");
+            id = scanner.nextInt();
 
-        switch (id) {
-            case BUTTON_PLUS:
-                res = (a + b);
-                System.out.println("Нажали на сумму");
-                System.out.println(" Равно: " + res);
-                break;
-            case BUTTON_MINUS:
-                res = (a - b);
-                System.out.println("Нажали на разницу");
-                System.out.println(" Равно: " + res);
-                break;
-            case BUTTON_MULT:
-                res = (a * b);
-                System.out.println("Нажали на умножение");
-                System.out.println(" Равно: " + res);
-                break;
-            case BUTTON_DIV:
-                res = (a / b);
-                System.out.println("Нажали на диление");
-                System.out.println(" Равно: " + res);
-                break;
-            case BUTTON_PERCENT:
-                res = (a % b);
-                System.out.println("Нажали на процент");
-                System.out.println(" Равно: " + res);
-                break;
-            default:
-                System.out.println("Вы ввели неправильное значение");
-                break;
+            switch (id) {
+                case BUTTON_PLUS:
+                    res = (a + b);
+                    System.out.println("Нажали на сумму");
+                    System.out.println(" Равно: " + res);
+                    break;
+                case BUTTON_MINUS:
+                    res = (a - b);
+                    System.out.println("Нажали на разницу");
+                    System.out.println(" Равно: " + res);
+                    break;
+                case BUTTON_MULT:
+                    res = (a * b);
+                    System.out.println("Нажали на умножение");
+                    System.out.println(" Равно: " + res);
+                    break;
+                case BUTTON_DIV:
+                    res = (a / b);
+                    System.out.println("Нажали на диление");
+                    System.out.println(" Равно: " + res);
+                    break;
+                case BUTTON_PERCENT:
+                    res = (a % b);
+                    System.out.println("Нажали на процент");
+                    System.out.println(" Равно: " + res);
+                    break;
+                default:
+                    System.out.println("Вы ввели неправильное значение");
+                    break;
+            }
         }
     }
 
@@ -467,8 +472,8 @@ public class Main {
         System.out.println("Самостоятельная работа");
         System.out.println("Задание № 9 ");
 
-        double x = 10;
-        double y = 10;
+        double x = 2;
+        double y = 3;
         double d;
         double b;
         if (x < y) {
@@ -487,6 +492,88 @@ public class Main {
             System.out.println("Error");
         }
     }
+
+    public static void example15() {
+
+        int opr1 = 7;
+        int max = 10;
+        int counter = 0;
+        int res;
+
+        while (counter <= max) {
+            res = (opr1 * counter);
+            System.out.println(opr1 + "*" + counter + "=" + res);
+
+            ++counter;
+        }
+
+    }
+
+    public static void example116() {
+
+        //Найти 15 первых натуральных чисел, делящихся нацело на 19 и больших 100.
+
+        int a = 15;
+        int i = 100;
+        int counter = 0;
+        int res;
+        while (counter <= a) {
+            res = (i % 19);
+            if (res == 0) {
+                ++counter;
+                System.out.println("15 чисел делящихся на 19: " + i);
+            }
+            ++i;
+        }
+
+
+    }
+
+    public static void example117() {
+
+        // Найти 20 первых натуральных чисел, делящихся нацело на 13 или на 17 и
+        // больших 500.
+
+        int a = 20;
+        int i = 500;
+        int counter = 0;
+        int res1;
+        int res2;
+        while (counter <= a) {
+            res1 = (i % 13);
+            res2 = (i % 17);
+
+            if (res1 == 0) {
+                ++counter;
+                System.out.println("20 первых чисел,делящихся нацело на 13: " + i);
+            }
+            if (res2 == 0) {
+                System.out.println("20 первых чисел,делящихся нацело на 17: " + i);
+            }
+            ++i;
+
+        }
+    }
+
+    public static void example118() {
+
+        //Посчитать сколько чисел в диапазоне от 0 до 1000 делится на 13
+
+        int counter = 0;
+        int max = 1000;
+        int res;
+        while (counter <= max) {
+            res = (max % 13);
+            if (res == 0) {
+                ++counter;
+                System.out.println("Количество чисел делящихся на 13: " + res);
+            }
+
+        }
+
+
+    }
+
 }
 
 
