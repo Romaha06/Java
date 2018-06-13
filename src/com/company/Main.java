@@ -2,6 +2,7 @@ package com.company;
 
 import java.util.Scanner;
 
+
 public class Main {
 
     public static void main(String[] args) {
@@ -15,14 +16,14 @@ public class Main {
         //example8();
         //example9();
         //example10();
-        // example11();
         //example12();
         //example13();
         //example14();
         //example15();
         //example116();
         //example117();
-        example118();
+       // example118();
+        example119();
 
 	   /* Scanner num = new Scanner(System.in);
 	    int first, second, result;
@@ -389,7 +390,6 @@ public class Main {
             b = scanner.nextInt();
 
             System.out.println("Введите id кнопки: ");
-            id = scanner.nextInt();
 
             switch (id) {
                 case BUTTON_PLUS:
@@ -560,22 +560,69 @@ public class Main {
         //Посчитать сколько чисел в диапазоне от 0 до 1000 делится на 13
 
         int counter = 0;
+        int x = 13;
         int max = 1000;
         int res;
-        while (counter <= max) {
-            res = (max % 13);
+        int i = 1;
+        while (i <= max) {
+            res = (i % x);
+
             if (res == 0) {
                 ++counter;
-                System.out.println("Количество чисел делящихся на 13: " + res);
             }
-
+            ++i;
         }
+        System.out.println("Количество чисел делящихся на 13: " + counter);
+
+
+    }
+
+    public static void example119() {
+        //Вводишь число. И нужно написать цикл который покажет сколько в этом числе содержится цифер
+        // которые делятся на 5
+
+        Scanner scanner = new Scanner(System.in);
+
+        int x = 0;
+        int y = 5;
+        int max;
+        int res;
+        int i = 1;
+
+        System.out.println("Введите число MAX: ");
+        max = scanner.nextInt();
+        while (i <= max) {
+            res = (i % y);
+
+            if (res == 0) {
+                ++x;
+
+            }
+            ++i;
+        }
+        System.out.println("Количество чисел делящихся на 5: " + x);
+
+
+       /* Scanner scanner = new Scanner(System.in);
+
+        int x = 0;
+        int y = 5;
+        int max;
+        int res = 0;
+        System.out.println("Введите число MAX: ");
+        max = scanner.nextInt();
+        while (max > 0) {
+            x = (max % y);
+            if (x == 0) {
+                res++;
+            }
+            max--;
+        }
+        System.out.println("Количество чисел делящихся на 5: " + res);*/
 
 
     }
 
 }
-
-
 
 
