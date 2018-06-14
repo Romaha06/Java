@@ -1,5 +1,6 @@
 package com.company;
 
+import java.util.Random;
 import java.util.Scanner;
 
 
@@ -22,8 +23,13 @@ public class Main {
         //example15();
         //example116();
         //example117();
-       // example118();
-        example119();
+        //example118();
+        //example119();
+        //cofee_machine();
+        //continuEX();
+        //game();
+        //bandit();
+        classWorkExempl();
 
 	   /* Scanner num = new Scanner(System.in);
 	    int first, second, result;
@@ -543,13 +549,11 @@ public class Main {
             res1 = (i % 13);
             res2 = (i % 17);
 
-            if (res1 == 0) {
+            if (res1 == 0 && res2 == 0) {
                 ++counter;
-                System.out.println("20 первых чисел,делящихся нацело на 13: " + i);
+                System.out.println("20 первых чисел,делящихся нацело на 13 и 17: " + i);
             }
-            if (res2 == 0) {
-                System.out.println("20 первых чисел,делящихся нацело на 17: " + i);
-            }
+
             ++i;
 
         }
@@ -602,7 +606,7 @@ public class Main {
         }
         System.out.println("Количество чисел делящихся на 5: " + x);
 
-
+        // Обратный счетчик
        /* Scanner scanner = new Scanner(System.in);
 
         int x = 0;
@@ -623,6 +627,168 @@ public class Main {
 
     }
 
-}
+    public static void cofee_machine() {
+        // Простая кофе машина
+        Scanner scanner = new Scanner(System.in);
 
+        int button;
+
+        while (true) {
+            System.out.println("Дабро пожаловать!!!");
+
+            System.out.println("Для выбора аммерикано нажмите: 1 ");
+
+            System.out.println("Для выбора эспрессо нажмите: 2 ");
+
+            System.out.println("Для выбора латте нажмите: 3 ");
+
+            System.out.println("Для выбора капучино нажмите: 4 ");
+
+            System.out.println("Сделайте Ваш выбор: ");
+            button = scanner.nextInt();
+
+            if (button == 1) {
+                System.out.println("Вы выбрали кофе аммерикано.");
+            } else if (button == 2) {
+                System.out.println("Вы выбрали кофе эспрессо.");
+            } else if (button == 3) {
+                System.out.println("Вы выбрали кофе латте.");
+            } else if (button == 4) {
+                System.out.println("Вы выбрали кофе капучино.");
+            } else {
+                System.out.println("Вы ввели неправильное значение");
+            }
+        }
+    }
+
+    public static void continuEX() {
+        //Создать цикл в котором будут генерироваться случайные числа, от 0 до 100
+        // если это числдо делится на 2 то вывести результат деления
+        // если чмсло делится на 3 то пропустить его и если случайно сгенерируемое число это 80
+        // то завершить выполнение цикла.
+
+        Random rand = new Random();
+        while (true) {
+            int a = rand.nextInt(100);
+            System.out.println("Сген. число - " + a);
+
+            if (a % 2 == 0) {
+                System.out.println("Число делится на 2: " + (a / 2));
+            } else if (a % 3 == 0) {
+                System.out.println("Если число делится на 3 то простить");
+                continue;
+            }
+
+            if (a == 80) {
+                System.out.println("Сгенерированое число 80, завершаем выполнение цикла.");
+                break;
+            }
+        }
+    }
+
+    public static void game() {
+        int userInput1;
+        int userInput2;
+        int userInput3;
+        int res1 = 0;
+        int res2 = 0;
+        int res3 = 0;
+
+        Scanner scanner = new Scanner(System.in);
+        Random rand = new Random();
+        System.out.println("Введите первое число: ");
+        userInput1 = scanner.nextInt();
+        System.out.println("Введите второе число: ");
+        userInput2 = scanner.nextInt();
+        System.out.println("Введите третье число: ");
+        userInput3 = scanner.nextInt();
+
+        int i = 0;
+        while (i < 10) {
+            res1 = rand.nextInt(5) + 1;
+            res2 = rand.nextInt(5) + 1;
+            res3 = rand.nextInt(5) + 1;
+            System.out.println(res1 + " " + res2 + " " + res3);
+            ++i;
+        }
+
+        int cunter = 0;
+        if (userInput1 == res1) {
+            cunter++;
+        }
+        if (userInput2 == res2) {
+            cunter++;
+        }
+        if (userInput3 == res3) {
+            cunter++;
+        }
+        System.out.println("Количество угаданных значений: " + cunter);
+    }
+
+
+    public static void bandit() {
+
+        Scanner scanner = new Scanner(System.in);
+        Random rand = new Random();
+
+        int res1;
+        int res2;
+        int res3;
+        System.out.println(" Для старта нажмите Enter ");
+        scanner.next();
+        int i = 0;
+
+        while (true) {
+            while (i < 20) {
+                res1 = rand.nextInt(10);
+                res2 = rand.nextInt(10);
+                res3 = rand.nextInt(10);
+                System.out.println(res1 + " " + res2 + " " + res3);
+                if (res1 == res2 && res2 == res3) {
+                    System.out.println("Вы выиграли!!!");
+                    break;
+                }
+                ++i;
+            }
+
+            if (i == 20) {
+                System.out.println("Вы проиграли!!!");
+            }
+
+            System.out.println("Нажмите enter чтобы повторить ");
+            i = 0;
+            scanner.next();
+        }
+    }
+
+    public static void classWorkExempl() {
+        System.out.println("Задание №2");
+
+        int[] erray = new int[10];
+        erray[0] = 1;
+        erray[1] = 0;
+        erray[2] = 3;
+        erray[3] = 4;
+        erray[4] = 4;
+        erray[5] = 5;
+        erray[6] = 2;
+        erray[7] = 1;
+        erray[8] = 3;
+        erray[9] = 4;
+
+        int sum1 = 22;
+        int sumElement = 0;
+        for (int i = 0; i < erray.length; i++) {
+            sumElement = sumElement + erray[i];
+        }
+        if (sum1 < sumElement) {
+            System.out.println("Вы проходите в следующие соревнования");
+        } else {
+            System.out.println("Вы ен добрали очков");
+
+        }
+
+    }
+
+}
 
