@@ -30,10 +30,10 @@ public class Main {
         //game();
         //bandit();
         //classWorkExempl();
-        //homWorkExempl();
+        homWorkExempl();
         //homWorkExempl2();
         //homWorkExempl3();
-        homWorkExemp4();
+        //homWorkExemp4();
 
 	   /* Scanner num = new Scanner(System.in);
 	    int first, second, result;
@@ -807,19 +807,25 @@ public class Main {
 
         System.out.println("Задание №7");
 
-        int[] h = new int[5];
-        int[] d = new int[5];
-        h[0] = 5;
+        int[] h = new int[8];
+        int[] d = new int[8];
+        h[0] = 1;
         h[1] = 10;
         h[2] = 6;
         h[3] = 1;
-        h[4] = 9;
+        h[4] = 10;
+        h[5] = 9;
+        h[6] = 1;
+        h[7] = 10;
 
-        d[0] = 2;
+        d[0] = 1;
         d[1] = 10;
-        d[2] = 3;
+        d[2] = 1;
         d[3] = 10;
         d[4] = 5;
+        d[5] = 2;
+        d[6] = 1;
+        d[7] = 10;
 
         int max_element1 = h[0];
         int max1_element2 = d[0];
@@ -829,10 +835,23 @@ public class Main {
         for (int i = 0; i < h.length; i++) {
             if (h[i] > max_element1) {
                 max_element1 = h[i];
-                System.out.println("Лучшие результаты: " + max_element1);
+                System.out.println("Лучшие результаты по прыжкам в длину: " + max_element1);
+            } else if (h[i] < min_element1) {
+                min_element1 = h[i];
+                System.out.println("Худший результат по прыжкам в длину: " + min_element1);
+            }
+            for (int e = 0; e < d.length; e++) {
+                if (d[e] > max1_element2) {
+                    max1_element2 = d[e];
+                    System.out.println("Лучшие результаты по прыжкам в высоту: " + max1_element2);
+                } else if (d[e] < min_element2) {
+                    min_element2 = d[e];
+                    System.out.println("Худший результат по прыжкам в высоту: " + min_element2);
+                }
             }
         }
     }
+
 
     public static void homWorkExempl2() {
 
@@ -903,8 +922,4 @@ public class Main {
     }
 
 }
-
-
-
-
 
