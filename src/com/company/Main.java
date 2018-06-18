@@ -29,7 +29,11 @@ public class Main {
         //continuEX();
         //game();
         //bandit();
-        classWorkExempl();
+        //classWorkExempl();
+        //homWorkExempl();
+        //homWorkExempl2();
+        //homWorkExempl3();
+        homWorkExemp4();
 
 	   /* Scanner num = new Scanner(System.in);
 	    int first, second, result;
@@ -42,7 +46,7 @@ public class Main {
 	    */
 
         //Ctrl + Alt + l - Форматировать код
-        //sout + Tab - быстрый System.out.println
+        //sout - быстрый System.out.println
         //Ctrl + d - копирование и вставка выбранной строки
 
         //Ввести с клавиатуры два числа типа int и произвести над ними все арефметические операции.
@@ -762,6 +766,12 @@ public class Main {
     }
 
     public static void classWorkExempl() {
+        //В массиве хранится информация о баллах, полученных спортсменом-
+        //десятиборцем в каждом из десяти видов спорта. Для выхода в следующий
+        //этап соревнований общая сумма баллов должна превысить некоторое
+        //известное значение. Определить, вышел ли данный спортсмен в
+        //следующий этап соревнований.
+
         System.out.println("Задание №2");
 
         int[] erray = new int[10];
@@ -784,11 +794,117 @@ public class Main {
         if (sum1 < sumElement) {
             System.out.println("Вы проходите в следующие соревнования");
         } else {
-            System.out.println("Вы ен добрали очков");
+            System.out.println("Вы не добрали очков");
 
         }
 
     }
 
+    public static void homWorkExempl() {
+        //На соревнованиях по прыжкам в высоту и в длину получены два массива
+        //результатов H(n) и D(n). Определить три лучших и три худших результата
+        //в каждом виде соревнований.
+
+        System.out.println("Задание №7");
+
+        int[] h = new int[5];
+        int[] d = new int[5];
+        h[0] = 5;
+        h[1] = 10;
+        h[2] = 6;
+        h[3] = 1;
+        h[4] = 9;
+
+        d[0] = 2;
+        d[1] = 10;
+        d[2] = 3;
+        d[3] = 10;
+        d[4] = 5;
+
+        int max_element1 = h[0];
+        int max1_element2 = d[0];
+        int min_element1 = h[0];
+        int min_element2 = d[0];
+
+        for (int i = 0; i < h.length; i++) {
+            if (h[i] > max_element1) {
+                max_element1 = h[i];
+                System.out.println("Лучшие результаты: " + max_element1);
+            }
+        }
+    }
+
+    public static void homWorkExempl2() {
+
+        //Дан целочисленный массив с количеством элементов n. Напечатать те его
+        //элементы, индексы которых являются степенями двойки (1, 2, 4, 8, 16, ...).
+
+        System.out.println("Задание №2");
+
+        int[] errey = new int[20];
+        errey[0] = 1;
+        errey[1] = 2;
+        errey[2] = 3;
+        errey[3] = 4;
+        errey[4] = 5;
+        errey[5] = 6;
+        errey[6] = 7;
+        errey[7] = 8;
+        errey[8] = 9;
+        errey[9] = 10;
+        errey[10] = 11;
+        errey[11] = 12;
+        errey[12] = 13;
+        errey[13] = 14;
+        errey[14] = 15;
+        errey[15] = 16;
+        errey[16] = 17;
+        errey[17] = 18;
+        errey[18] = 19;
+        errey[19] = 20;
+
+        for (int i = 1; i < errey.length; i = i * 2) {
+            System.out.println("Индексы являющиеся степенями двойки " + i);
+        }
+
+    }
+
+
+    public static void homWorkExempl3() {
+        //Найти сумму четных элементов массива целых чисел.
+
+        System.out.println("Задание №3");
+
+        int[] errey = {1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15};
+        int sum = 0;
+        for (int i = 1; i < errey.length; i++) {
+            sum = sum + errey[i];
+            if (errey[i] % 2 == 0) {
+                System.out.println("Сумма четных целых чисел:" + errey[i]);
+
+            }
+        }
+    }
+
+    public static void homWorkExemp4() {
+        //Найти произведение элементов массива целых чисел, которые кратны 9.
+
+        System.out.println("Задание №4");
+
+        int[] errey = new int[]{1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15};
+        int sum = 0;
+        for (int i = 0; i < errey.length; i++) {
+            sum = sum * errey[i];
+            if (errey[i] % 9 == 0) {
+                System.out.println("Числа кратные 9: " + errey[i]);
+
+            }
+        }
+    }
+
 }
+
+
+
+
 
