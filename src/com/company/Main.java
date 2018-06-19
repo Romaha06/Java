@@ -2,6 +2,7 @@ package com.company;
 
 import java.util.Random;
 import java.util.Scanner;
+import java.util.Arrays;
 
 
 public class Main {
@@ -807,49 +808,124 @@ public class Main {
 
         System.out.println("Задание №7");
 
-        int[] h = new int[8];
-        int[] d = new int[8];
-        h[0] = 1;
-        h[1] = 10;
-        h[2] = 6;
-        h[3] = 1;
-        h[4] = 10;
-        h[5] = 9;
-        h[6] = 1;
-        h[7] = 10;
+        int[] d = new int[10];
+        int[] h = new int[10];
 
-        d[0] = 1;
-        d[1] = 10;
-        d[2] = 1;
-        d[3] = 10;
-        d[4] = 5;
-        d[5] = 2;
-        d[6] = 1;
-        d[7] = 10;
+        Random random = new Random();
 
-        int max_element1 = h[0];
-        int max1_element2 = d[0];
-        int min_element1 = h[0];
-        int min_element2 = d[0];
-
-        for (int i = 0; i < h.length; i++) {
-            if (h[i] > max_element1) {
-                max_element1 = h[i];
-                System.out.println("Лучшие результаты по прыжкам в длину: " + max_element1);
-            } else if (h[i] < min_element1) {
-                min_element1 = h[i];
-                System.out.println("Худший результат по прыжкам в длину: " + min_element1);
-            }
-            for (int e = 0; e < d.length; e++) {
-                if (d[e] > max1_element2) {
-                    max1_element2 = d[e];
-                    System.out.println("Лучшие результаты по прыжкам в высоту: " + max1_element2);
-                } else if (d[e] < min_element2) {
-                    min_element2 = d[e];
-                    System.out.println("Худший результат по прыжкам в высоту: " + min_element2);
-                }
-            }
+        System.out.println("Первый масив результатов: ");
+        for (int i = 0; i < d.length; i++) {
+            d[i] = random.nextInt(11);
+            System.out.print(d[i] + " ");
         }
+        System.out.println("\nВторой масив результатов: ");
+        for (int i = 0; i < h.length; i++) {
+            h[i] = random.nextInt(11);
+            System.out.print(h[i] + " ");
+
+        }
+        // Определяем минимальный и максимальный элемент для первого массива
+        int[] d1Max = new int[3];
+        int[] d1Min = new int[3];
+        // Определяем минимальный и максимальный элемент для второго массива
+        int[] h2Max = new int[3];
+        int[] h2Min = new int[3];
+
+        d1Max[0] = d[0];
+        d1Min[0] = d[0];
+        d1Max[1] = d[1];
+        d1Min[1] = d[1];
+        d1Max[2] = d[2];
+        d1Min[2] = d[2];
+
+        h2Max[0] = h[0];
+        h2Min[0] = h[0];
+        h2Max[1] = h[1];
+        h2Min[1] = h[1];
+        h2Max[2] = h[2];
+        h2Min[2] = h[2];
+
+        for (int i = 0; i < 3; i++) {
+            // Ищем минимальный и максимальный элемент в первом массиве
+            for (int j = 0; j < d.length; j++) {
+                if (i == 0) {
+                    // Поиск максимального
+                    if (d[j] > d1Max[0]) {
+                        d1Max[0] = d[j];
+                    }
+                    // Поиск минимального
+                    if (d[j] < d1Min[0]) {
+                        d1Min[0] = d[j];
+                    }
+                } else if (i == 1) {
+                    // Поиск максимального
+                    if (d[j] > d1Max[1] && d[j] != d1Max[0]) {
+                        d1Max[1] = d[j];
+                    }
+                    // Поиск минимального
+                    if (d[j] < d1Min[1] && d[j] != d1Min[0]) {
+                        d1Min[1] = d[j];
+                    }
+                } else if (i == 2) {
+                    // Поиск максимального
+                    if (d[j] > d1Max[2] && d[j] != d1Max[0]
+                            && d[j] != d1Max[1]) {
+                        d1Max[2] = d[j];
+                    }
+                    // Поиск минимального
+                    if (d[j] < d1Min[2] && d[j] != d1Min[0]
+                            && d[j] != d1Min[1]) {
+                        d1Min[2] = d[j];
+                    }
+                }
+
+            }
+            for (int j = 0; j < h.length; j++) {
+                if (i == 0) {
+                    // Поиск максимального
+                    if (h[j] > h2Max[0]) {
+                        h2Max[0] = h[j];
+                    }
+                    // Поиск минимального
+                    if (h[j] < h2Min[0]) {
+                        h2Min[0] = h[j];
+                    }
+                } else if (i == 1) {
+                    // Поиск максимального
+                    if (h[j] > h2Max[1] && h[j] != h2Max[0]) {
+                        h2Max[1] = h[j];
+                    }
+                    // Поиск минимального
+                    if (h[j] < h2Min[1] && h[j] != h2Min[0]) {
+                        h2Min[1] = h[j];
+                    }
+                } else if (i == 2) {
+                    // Поиск максимального
+                    if (h[j] > h2Max[2] && h[j] != h2Max[0]
+                            && h[j] != h2Max[1]) {
+                        h2Max[2] = h[j];
+                    }
+                    // Поиск минимального
+                    if (h[j] < h2Min[2] && h[j] != h2Min[0]
+                            && h[j] != h2Min[1]) {
+                        h2Min[2] = h[j];
+                    }
+                }
+
+            }
+
+        }
+        // Функция Arrays.toString(сюда передать массив) - возвращает строку с элементами массива
+        System.out.println("\nМаксимальные в первом массиве:");
+        System.out.println(Arrays.toString(d1Max));
+        System.out.println("Минимальные в первом массиве");
+        System.out.println(Arrays.toString(d1Min));
+        // Функция Arrays.toString(сюда передать массив) - возвращает строку с элементами массива
+        System.out.println("\nМаксимальные во втором массиве:");
+        System.out.println(Arrays.toString(h2Max));
+        System.out.println("Минимальные во втором массиве");
+        System.out.println(Arrays.toString(h2Min));
+
     }
 
 
