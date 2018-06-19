@@ -916,14 +916,14 @@ public class Main {
 
         }
         // Функция Arrays.toString(сюда передать массив) - возвращает строку с элементами массива
-        System.out.println("\nМаксимальные в первом массиве:");
+        System.out.println("\nМаксимальные результаты в первом массиве:");
         System.out.println(Arrays.toString(d1Max));
-        System.out.println("Минимальные в первом массиве");
+        System.out.println("Минимальные результаты в первом массиве");
         System.out.println(Arrays.toString(d1Min));
         // Функция Arrays.toString(сюда передать массив) - возвращает строку с элементами массива
-        System.out.println("\nМаксимальные во втором массиве:");
+        System.out.println("\nМаксимальные результаты во втором массиве:");
         System.out.println(Arrays.toString(h2Max));
-        System.out.println("Минимальные во втором массиве");
+        System.out.println("Минимальные результаты во втором массиве");
         System.out.println(Arrays.toString(h2Min));
 
     }
