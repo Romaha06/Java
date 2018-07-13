@@ -31,10 +31,13 @@ public class Main {
         //game();
         //bandit();
         //classWorkExempl();
-        homWorkExempl();
+        //homWorkExempl();
         //homWorkExempl2();
         //homWorkExempl3();
         //homWorkExemp4();
+        //clasWorkExem4_6()
+        //clasWorkExem4_1();
+       clasWorkExem4_9();
 
 	   /* Scanner num = new Scanner(System.in);
 	    int first, second, result;
@@ -997,5 +1000,95 @@ public class Main {
         }
     }
 
+    public static void clasWorkExem4_6() {
+
+        int[] arrey = new int[10];
+        Random random = new Random();
+        for (int i = 0; i < arrey.length; i++) {
+            arrey[i] = random.nextInt(50);
+        }
+        System.out.println("Исходный масив: ");
+        for (int i = 0; i < arrey.length; i++) {
+            System.out.println(arrey[i] + " ");
+        }
+        // Присваевоние макимального и минемального значения и присвоить и м нули.
+        int maxElement = arrey[0];
+        int minElement = arrey[0];
+
+        int maxElementIndex = 0;
+        int minElementIndex = 0;
+
+        for (int i = 0; i < arrey.length; i++) {
+            if (arrey[i] >= maxElement) {
+                maxElement = arrey[i];
+                maxElementIndex = i;
+            }
+            if (arrey[i] <= minElement) {
+                minElement = arrey[i];
+                minElementIndex = i;
+            }
+        }
+        arrey[maxElementIndex] = 0;
+        arrey[minElementIndex] = 0;
+    }
+
+    public static void clasWorkExem4_1() {
+
+        int[] arrey = new int[35];
+        Random random = new Random();
+
+        for (int i = 0; i < arrey.length; i++) {
+            arrey[i] = random.nextInt(100);
+        }
+        System.out.println("Исходный масив: ");
+        for (int i = 0; i < arrey.length; i++) {
+            System.out.println(arrey[i] + " ");
+        }
+        int sum = 0;
+        for (int i = 0; i < arrey.length; i++) {
+            sum = sum + arrey[i];
+        }
+        if (sum >= 100000 && sum < 1000000) {
+            System.out.println("Число шистизначное");
+        } else {
+            System.out.println("Чсло не шистизначное");
+        }
+    }
+
+    public static void clasWorkExem4_9(){
+        int [] arrey = new int [20];
+        Random random = new Random();
+
+        // Заполняем массив случайными элементами
+
+        for (int i = 0; i < arrey.length ; i++) {
+            arrey[i] = random.nextInt(50);
+        }
+        //Выводим масив на экран
+        System.out.println("Исходный массив: ");
+        for (int i = 0; i < arrey.length; i++) {
+            System.out.print(arrey[i] + " ");
+        }
+        // Задание 1
+        for (int i = 0; i < arrey.length ; i++) {
+            if (arrey[i] % 2 == 0 && i % 2 == 1){
+                arrey[i] = 0;
+            }
+        }
+        //задание 2
+        for (int i = 0; i < arrey.length ; i++) {
+            if (arrey[i] % 3 == 0 || arrey[i] % 5 == 0 ){
+                arrey[i] = 0;
+            }
+        }
+        // Выводим массив на экран
+        System.out.println("\nПреобразованый массив: ");
+        for (int i = 0; i < arrey.length; i++){
+            System.out.print( arrey[i] + " ");
+        }
+    }
 }
+
+
+
 
