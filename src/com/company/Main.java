@@ -37,7 +37,12 @@ public class Main {
         //homWorkExemp4();
         //clasWorkExem4_6()
         //clasWorkExem4_1();
-       clasWorkExem4_9();
+        //clasWorkExem4_9();
+        //homWorkExem6();
+        //homWorkExem4_2();
+        //clasWorkExem4_7();
+        //clasWorkExem4_8();
+        homWorkExem4_5();
 
 	   /* Scanner num = new Scanner(System.in);
 	    int first, second, result;
@@ -733,7 +738,6 @@ public class Main {
         System.out.println("Количество угаданных значений: " + cunter);
     }
 
-
     public static void bandit() {
 
         Scanner scanner = new Scanner(System.in);
@@ -931,7 +935,6 @@ public class Main {
 
     }
 
-
     public static void homWorkExempl2() {
 
         //Дан целочисленный массив с количеством элементов n. Напечатать те его
@@ -967,7 +970,6 @@ public class Main {
 
     }
 
-
     public static void homWorkExempl3() {
         //Найти сумму четных элементов массива целых чисел.
 
@@ -1000,7 +1002,142 @@ public class Main {
         }
     }
 
+    public static void homWorkExem6() {
+    /*Руководство фирмы ведет по месяцам учет расходов и поступлений
+    средств. За n месяцев получены два массива: R(n) — расходов и P(n) —
+    поступлений. Сформировать из массивов R(n) и P(n) массив прибыли Z(n).
+    Определить общую прибыль (как за весь период, так и по месяцам она
+            может быть отрицательная), месяц с максимальной и месяц с минимальной
+    прибылью, количество месяцев с положительной прибылью.*/
+
+      /*  int[] arreyR = new int[10];
+        int[] arreyP = new int[10];
+        Random random = new Random();
+
+        // Заполняем массивы случайными элементами
+
+        for (int i = 0; i < arreyR.length; i++) {
+            arreyR[i] = random.nextInt(100);
+        }
+        for (int i = 0; i < arreyP.length; i++) {
+            arreyP[i] = random.nextInt(100);
+        }
+        //Выводим масивы на экран
+        System.out.println("Исходный масив расходов:");
+        for (int i = 0; i < arreyR.length; i++) {
+            System.out.print(arreyR[i] + " ");
+        }
+        System.out.println("\nИсходный масив поступлений:");
+        for (int i = 0; i < arreyR.length; i++) {
+            System.out.print(arreyP[i] + " ");
+        }
+        // Присваевоние макимального и минемального значения
+        int maxElement = arreyR[0];
+        int minElement = arreyP[0];
+
+        int maxElementIndex = 0;
+        int minElementIndex = 0;
+        for (int i = 0; i < arreyR.length; i++) {
+            if (arreyR[i] >= maxElement) {
+                maxElement = arreyR[i];
+                maxElementIndex = i;
+            }
+            if (arreyR[i] <= minElement) {
+                minElement = arreyR[i];
+                minElementIndex = i;
+            }
+            for (int i = 0; i < arreyP.length ; i++) {
+                if (arreyP[i] >= maxElement){
+                    maxElement = arreyP[i];
+                    maxElementIndex = i;
+                }
+                if (arreyP[i] <= minElement){
+                    minElement = arreyP[i];
+                    minElementIndex = i;
+                }
+            }
+        }
+        int [] arreyCost = new int [5];
+
+    }*/
+
+    }
+
+    public static void clasWorkExem4_1() {
+
+        /*В массиве хранится информация о численности книг в каждом из 35
+        разделов библиотеки. Выяснить, верно ли, что общее число книг в
+        библиотеке есть шестизначное число.*/
+
+        int[] arrey = new int[35];
+        Random random = new Random();
+
+        for (int i = 0; i < arrey.length; i++) {
+            arrey[i] = random.nextInt(100);
+        }
+        System.out.println("Исходный масив: ");
+        for (int i = 0; i < arrey.length; i++) {
+            System.out.println(arrey[i] + " ");
+        }
+        int sum = 0;
+        for (int i = 0; i < arrey.length; i++) {
+            sum = sum + arrey[i];
+        }
+        if (sum >= 100000 && sum < 1000000) {
+            System.out.println("Число шистизначное");
+        } else {
+            System.out.println("Чсло не шистизначное");
+        }
+    }
+
+    public static void homWorkExem4_2() {
+       /* В массиве хранится информация о баллах, полученных спортсменом-
+          десятиборцем в каждом из десяти видов спорта. Для выхода в следующий
+          этап соревнований общая сумма баллов должна превысить некоторое
+          известное значение. Определить, вышел ли данный спортсмен в
+          следующий этап соревнований.*/
+
+        int[] arrey = new int[10];
+        Random random = new Random();
+        int sum = 0;
+        int maxBall = 50;
+
+        // Заполняем массив балами
+        for (int i = 0; i < arrey.length; i++) {
+            arrey[i] = random.nextInt(20);
+            System.out.print(arrey[i] + " ");
+            // Находим сумму всех балов
+            sum = sum + arrey[i];
+        }
+        //Выводим сумму всех балов на экран
+        System.out.println("\nОбщая сумма всех балов: " + sum);
+        if (maxBall < sum) {
+            System.out.println("Вы проходите в следующий этап!");
+        } else System.out.println("Вы не набрали максимальный бал!");
+    }
+
+    public static void homWorkExem4_5(){
+
+        /* Задан целочисленный массив размерности N. Есть ли среди элементов
+           массива простые числа? Если да, то вывести номера этих элементов.*/
+
+        int [] arrey = new int[10];
+        Random random = new Random();
+
+        //Заполняем массив случ. элементами и выводим на экран
+        for (int i = 0; i < arrey.length ; i++) {
+            arrey[i] = random.nextInt(20);
+            System.out.println(arrey[i] + " ");
+
+        }
+
+    }
+
     public static void clasWorkExem4_6() {
+
+        /*Дан массив, в котором все элементы различны. Заменить в нём нулём :
+        а) максимальный элемент;
+        б) минимальный элемент.*/
 
         int[] arrey = new int[10];
         Random random = new Random();
@@ -1032,36 +1169,106 @@ public class Main {
         arrey[minElementIndex] = 0;
     }
 
-    public static void clasWorkExem4_1() {
+    public static void clasWorkExem4_7() {
 
-        int[] arrey = new int[35];
+        /*Заменить нулями все повторяющиеся элементы в массиве, оставив их
+        первые вхождения, то есть в массиве должны остаться только разные
+        элементы.*/
+
+        int array[] = new int[20];
+
         Random random = new Random();
 
-        for (int i = 0; i < arrey.length; i++) {
-            arrey[i] = random.nextInt(100);
+        // Заполняем случайными значениями
+        for (int i = 0; i < array.length; i++) {
+            array[i] = random.nextInt(10);
         }
-        System.out.println("Исходный масив: ");
-        for (int i = 0; i < arrey.length; i++) {
-            System.out.println(arrey[i] + " ");
+
+        // Выводим массив на экран
+        System.out.println("Исходный массив:");
+        for (int i = 0; i < array.length; i++) {
+            System.out.print(array[i] + " ");
         }
-        int sum = 0;
-        for (int i = 0; i < arrey.length; i++) {
-            sum = sum + arrey[i];
+        //Заменить нулями все повторяющиеся элементы в массиве
+        for (int i = 0; i < array.length; i++) {
+            for (int j = 0; j < array.length; j++) {
+                if (i == j) continue;
+
+                if (array[j] == array[i])
+                    array[j] = 0;
+            }
         }
-        if (sum >= 100000 && sum < 1000000) {
-            System.out.println("Число шистизначное");
-        } else {
-            System.out.println("Чсло не шистизначное");
+
+        // Выводим массив на экран
+        System.out.println("\nПреобразованный массив:");
+        for (int i = 0; i < array.length; i++) {
+            System.out.print(array[i] + " ");
         }
     }
 
-    public static void clasWorkExem4_9(){
-        int [] arrey = new int [20];
+    public static void clasWorkExem4_8() {
+
+        /* Заменить нулями :
+        а) все отрицательные элементы;
+        б) все элементы, большие данного числа n;
+        в) все элементы, начиная с n1-го по n2-й (n1 ≤ n2).*/
+
+        int[] array = new int[20];
+        Random random = new Random();
+
+        // Заполняем массив случайными значениями
+        for (int i = 0; i < array.length; i++) {
+            array[i] = random.nextInt(100) - 50;
+        }
+
+        // Выводим массив на экран
+        System.out.println("Исходный массив:");
+        for (int i = 0; i < array.length; i++) {
+            System.out.print(array[i] + " ");
+        }
+
+        // Задание 1: Заменяем нулями все отрицательные элементы
+        for (int i = 0; i < array.length; i++) {
+            if (array[i] < 0) {
+                array[i] = 0;
+            }
+        }
+
+        // Задание 2: Заменяем все элементы, большие данного числа n
+        int n = 40;
+        for (int i = 0; i < array.length; i++) {
+            if (array[i] > n) {
+                array[i] = 0;
+            }
+        }
+
+        // Задание 3: Заменяем все элементы, начиная с n1-го по n2-й (n1 ≤ n2)
+        int n1 = 10;
+        int n2 = 15;
+
+        for (int i = n1; i <= n2; i++) {
+            array[i] = 0;
+        }
+
+        // Выводим массив на экран
+        System.out.println("\nПреобразованный массив:");
+        for (int i = 0; i < array.length; i++) {
+            System.out.print(array[i] + " ");
+        }
+    }
+
+    public static void clasWorkExem4_9() {
+
+        /*Дан массив целых чисел. Удалить из него:
+        а) все четные элементы, стоящие на нечетных местах;
+        б) все элементы, кратные 3 или 5.*/
+
+        int[] arrey = new int[20];
         Random random = new Random();
 
         // Заполняем массив случайными элементами
 
-        for (int i = 0; i < arrey.length ; i++) {
+        for (int i = 0; i < arrey.length; i++) {
             arrey[i] = random.nextInt(50);
         }
         //Выводим масив на экран
@@ -1070,24 +1277,28 @@ public class Main {
             System.out.print(arrey[i] + " ");
         }
         // Задание 1
-        for (int i = 0; i < arrey.length ; i++) {
-            if (arrey[i] % 2 == 0 && i % 2 == 1){
+        for (int i = 0; i < arrey.length; i++) {
+            if (arrey[i] % 2 == 0 && i % 2 == 1) {
                 arrey[i] = 0;
             }
         }
         //задание 2
-        for (int i = 0; i < arrey.length ; i++) {
-            if (arrey[i] % 3 == 0 || arrey[i] % 5 == 0 ){
+        for (int i = 0; i < arrey.length; i++) {
+            if (arrey[i] % 3 == 0 || arrey[i] % 5 == 0) {
                 arrey[i] = 0;
             }
         }
         // Выводим массив на экран
         System.out.println("\nПреобразованый массив: ");
-        for (int i = 0; i < arrey.length; i++){
-            System.out.print( arrey[i] + " ");
+        for (int i = 0; i < arrey.length; i++) {
+            System.out.print(arrey[i] + " ");
         }
     }
+
 }
+
+
+
 
 
 
